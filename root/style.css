@@ -1,0 +1,123 @@
+.hidden {
+    display: none;
+}
+
+.img-size{
+    width: 50px; 
+    height: 40px;
+}
+
+.clickable:hover{
+    cursor: pointer;
+}
+
+.option-part{
+    margin-top: 30px;
+}
+
+body.dark {
+    background-color: #333333;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid red;
+}
+
+h1 {
+    font-size: 45pt;
+    margin-bottom: 2%;
+}
+
+#theme{
+    margin-bottom: 2%;
+}
+
+button {
+    justify-self: center;
+}
+
+.info-display {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+}
+
+#start-btn{
+    margin-top: 4%;
+    border-radius: 12px;
+    outline: none;
+}
+
+
+#number-container>p {
+    border: 1px solid black;
+    color: green;
+    border-radius: 20%;
+    width: 60px;
+    height: 60px;
+    font-size: 40pt;
+    margin-right: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#board {
+    padding-top: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 600px;
+    height: 600px;
+}
+
+.cell {
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 40pt;
+}
+
+p.selected, #start-btn:hover, .cell:hover, #number-container>p:hover{
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+p.invalidAdd{
+    background-color: greenyellow;
+}
+
+p.add{
+    color: darkcyan;
+}
+
+p.incorrect {
+    color: red;
+}
+
+.rightBorder {
+    border-right: 4px solid black;
+}
+
+.bottomBorder {
+    border-bottom: 4px solid black;
+}
+
+footer {
+    text-align: center;
+    color: #454545;
+    background: linear-gradient(120deg, #ccffff, #ffcccc);	
+}

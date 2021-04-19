@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thanhb1805916">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Sudoku</title>
+    <link rel="shortcut icon" type="image/x-icon" href="src/game-icon.png" />
+    <link rel="stylesheet" href="root/style.css">
+    <script src="root/SudokuSolver.js"></script>
+    <script src="root/SudokuBoard.js"></script>
+    <script src="root/App.js"></script>
+</head>
+<header>
+    <h1 style="color: aqua;">Sudoku</h1>
+    <div id="theme">
+        <label class="info-display">Màu nền:</label>
+        <input id="theme-1" type="radio" class="clickable" name="theme" onclick="addTheme()" value="light" checked><label id="lbl-theme-1">Sáng</label>
+        <input id="theme-2" type="radio" class="clickable" name="theme" onclick="addTheme()" value="dark"> <label id="lbl-theme-2">Tối</label>
+    </div>
+
+    <h2><a href="info.html" target="_blank" style="color: aqua;">Luật chơi</a></h2>
+
+    <div class="option-part">
+        <label class="info-display">Thêm file:</label>
+        <input type="checkbox" class="clickable" onchange="showImport()">
+    </div>
+    <div id="auto-gen" class="option-part">
+        <div>
+            <label id="diff-title" class="info-display">Độ khó: </label>
+            <input type="radio" class="clickable" name="diff" value="beginner" checked><label id="diff-0">Tập chơi</label>
+            <input type="radio" class="clickable" name="diff" value="easy"> <label id="diff-1">Dễ</label>
+            <input type="radio" class="clickable" name="diff" value="medium"> <label id="diff-2">Trung bình</label>
+            <input type="radio" class="clickable" name="diff" value="hard"> <label id="diff-3">Khó</label>
+            <input type="radio" class="clickable" name="diff" value="expert"> <label id="diff-4">Chuyên gia</label>
+        </div>
+        <div class="info-display">
+            <button id="start-btn" class="info-display">Game mới</button>
+        </div>
+    </div>
+    <div id="usr-imp" class="option-part hidden">
+        <label class="info-display">Tải file lên: </label>
+        <label for="sudokuFile">
+                <img class="img-size clickable" src="src/upload.jpg">
+            </label>
+        <input id="sudokuFile" class="fileImp" style="display: none;" type="file">
+        <span class="info-display" style="color:aqua">---------Hoặc---------</span>
+        <label class="info-display">Nhập bằng tay</label>
+        <img id="inputText" class="img-size clickable" style="background-color: white;" src="src/typing.png" />
+    </div>
+</header>
+
+<body>
+    <div id="stats">
+        <p id="timer" class="info-display"></p>
+        <p id="notify" class="info-display" style="color:gold"></p>
+        <p class="info-display"><button id="downloadBoard" class="clickable hidden" type="submit">Lưu về máy</button></p>
+    </div>
+    <div id="game">
+        <div id="number-container" class="hidden">
+            <p id="one">1</p>
+            <p id="two">2</p>
+            <p id="three">3</p>
+            <p id="four">4</p>
+            <p id="five">5</p>
+            <p id="six">6</p>
+            <p id="seven">7</p>
+            <p id="eight">8</p>
+            <p id="nine">9</p>
+        </div>
+        <div id="board"></div>
+    </div>
+</body>
+
+<footer>
+    <h4>Niên luận cơ sở ngành KTPM</h4>
+    <h4>Tác giả Vương Cẩm Thanh - B1805916</h4>
+</footer>
+
+</html>
